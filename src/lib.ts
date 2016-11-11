@@ -10,11 +10,11 @@ import * as util from "util"
 import * as fs from "fs"
 import * as os from "os"
 
-export class BunyanSpy {
+export class BunyanAnalytics {
 
-    public logfile: string
+    public logfile: any
 
-    constructor(logfile: string) {
+    constructor(logfile: any) {
 
         let results = new Array()
 
@@ -29,8 +29,10 @@ export class BunyanSpy {
             })
         })
     }
-    public collect() {return}
-    public parse() {return}
-    public report() {return}
+    public gather(logfile, () => {
+        this.logfile return
+    })
+    public transform() {return}
+    public generate() {return}
 }
 
