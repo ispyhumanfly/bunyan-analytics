@@ -1,0 +1,55 @@
+{
+  "name": "bunyan-spy",
+  "version": "0.0.1",
+  "description": "A comprehensive technology for easly parsing and analyzing Bunyan JSON logs.",
+  "main": "dist/index.js",
+  "bin": {
+    "bunyan-spy": "node_modules/.bin/shelljs dist/bunyan-spy.js"
+  },
+  "scripts": {
+    "prepublish": "node_modules/.bin/tsc index.ts > node_modules/.bin/shx mkdir dist mv dist/index.js",
+    "postpublish": "node_modules/.bin/shx rm -rf",
+    "start": "node_modules/.bin/tsc index.ts node_modules/.bin/shx mv index.js dist/index.js",
+    "test": "jasmine -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ispyhumanfly/bunyan-analytics.git"
+  },
+  "keywords": [
+    "node",
+    "logging",
+    "bunyan",
+    "json",
+    "logger",
+    "express",
+    "analytics",
+    "charts",
+    "reports",
+    "reporting"
+  ],
+  "author": "Dan Stephenson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ispyhumanfly/bunyan-analytics/issues"
+  },
+  "homepage": "https://github.com/ispyhumanfly/bunyan-analytics#readme",
+  "dependencies": {
+    "console": "^0.5.2",
+    "fs": "0.0.1-security",
+    "jasmine": "^2.5.2",
+    "jsonfile": "^2.4.0",
+    "jsonfile2": "^2.1.0",
+    "jsonrepair": "^0.1.0",
+    "os": "^0.1.1",
+    "shelljs": "^0.7.5",
+    "shx": "^0.2.0",
+    "util": "^0.10.3"
+  },
+  "devDependencies": {
+    "typescript": "^2.0.8",
+    "typescript-compiler": "^1.4.1-2",
+    "typings": "^2.0.0",
+    "uglify-js": "^2.7.4"
+  }
+}
